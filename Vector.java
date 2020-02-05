@@ -6,7 +6,7 @@
  * Se vincula al último nodo de la colección. 
  */
 
-public class Vector implements Stack{
+public class Vector<E> implements Stack<E>{
     //Atributos de clase
     private int n; //Numero de elementos en la colección
     private Nodo<E> tail; //Último nodo de la colección
@@ -36,22 +36,37 @@ public class Vector implements Stack{
     /**
      * El último elemento en ser ingresado es removido de la colección
      */
-    public E pop(){}
+    public E pop(){
+        Nodo<E> newTail = this.getTail().prev();
+        this.setTail(newTail);
+        this.setN(this.getN()-1);
+        return newTail.value();
+    }
 
     /**
      * @return Último elemento de la colección
      */
-    public E peek(){}
+    public E peek(){
+        return this.getTail().value();
+    }
 
     /**
      * @return boolean si el stack esta vacío o no
      */
-    public boolean empty(){}
+    public boolean empty(){
+        if(this.getN()==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
    
     /**
      * @return Numero de elementos en el stack
      */
-    public int size(){}
+    public int size(){
+        return this.getN();
+    }
 
 
 
@@ -80,6 +95,8 @@ public class Vector implements Stack{
             values+=String.valueOf(nodo.value())+", ";
             nodo = nodo.prev();
         }
-        return "["+values+"]";
+        //Retorna los elementos en formto:
+        // [a, b, c, ... n]
+        return "["+values.substring(0,values.length()-2)+"]";
     }
 }
