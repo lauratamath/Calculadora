@@ -44,7 +44,7 @@ public class Nodo<E>{
     * @param prev  El nodo en posición anterior en la lista
     * Establece el nodo que antecede a este
     */
-   public void setprev(Nodo<E> prev){
+   public void setPrev(Nodo<E> prev){
       prevElement = prev;
    }
 
