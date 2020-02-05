@@ -6,10 +6,11 @@
  * Cada nodo apunta al nodo que lo antecede (inverso a un nodo común). 
  */
 
-public class Nodo<E>
-{
+public class Nodo<E>{
+   //Atributos de clase
    protected E data; // Valor que se almacena en este nodo
    protected Node<E> prevElement; // Refiere al nodo anterior
+
 
    /**
     * @param v      valor del elemento del nodo
@@ -21,6 +22,7 @@ public class Nodo<E>
        prevElement = prev;
    }
 
+
    /**
     * @param v   valor del elemento del nodo
     * Construye un nuevo nodo en la cabeza de la lista
@@ -29,12 +31,14 @@ public class Nodo<E>
       this(v,null);
    }
 
+
    /**
     * @return Referencia al nodo anterior
     */
    public Nodo<E> prev(){
       return prevElement;
    }
+
 
    /**
     * @param prev  El nodo en posición anterior en la lista
@@ -44,12 +48,14 @@ public class Nodo<E>
       prevElement = prev;
    }
 
+
    /**
     * @return Valor del elemento de este nodo
     */
    public E value(){
       return data;
    }
+
 
    /**
     * @param value  Elemento asociado al tipo de dato de la lista
