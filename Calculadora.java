@@ -13,7 +13,7 @@ public class Calculadora implements iCalculadora{
 	}
 
 	//metodo de resta
-	public int resta(int operando1, int operando2){
+	public int restar(int operando1, int operando2){
 		//Pre: hay dos operandos
 		return operando1 - operando2;
 		//Post: los operandos se restan
