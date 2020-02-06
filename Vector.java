@@ -40,7 +40,7 @@ public class Vector<E> implements Stack<E>{
         Nodo<E> oldTail = this.getTail();
         Nodo<E> newTail = new Nodo<E>(null);
         if(this.empty()){
-            return null
+            return null;
         }else{
             newTail = oldTail.prev();
             this.setTail(newTail);
