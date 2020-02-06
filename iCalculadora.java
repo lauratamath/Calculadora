@@ -6,35 +6,40 @@
  * Se vincula al último nodo de la colección. 
  */
 public interface iCalculadora{
+
+	/**
+	 * @param operando1		Segundo numero a sumar
+	 * @param operando2     Primer numero a sumar
+	 * @return Valor de la suma
+	 * Método de suma
+	*/
 	public int sumar(int operando2,int operando1);
-		//pre: hay dos operandos
-		/**
-		 * @param operando2		Primer numero a sumar
-		 * @param operando1     Segundo numero a sumar
-		 * @return entero 		La suma de dos enteros
-		 */
+		
 
+	/**
+	 * @param operando1		Segundo numero a restar
+	 * @param operando2     Primer numero a restar
+	 * @return Valor de la resta
+	 * Método de resta aritmética
+	*/
 	public int restar(int operando2,int operando1);
-		//pre: hay dos operandos
-		/**
-		 * @param operando2		Primer numero a restar
-		 * @param operando1     Segundo numero a restar
-		 * @return entero 		La resta de dos enteros
-		 */
 
+	/**
+	 * @param operando1		Segundo numero a multiplicar
+	 * @param operando2     Primer numero a multiplicar
+	 * @return Valor de la multiplicación
+	 * Método de multiplicación
+	*/
 	public int multiplicar(int operando2,int operando1); 
 		//pre: hay dos operandos
-		/**
-		 * @param operando2		Primer numero a multiplicar
-		 * @param operando1     Segundo numero a multiplicar
-		 * @return entero 		La multiplicacion de dos enteros
-		 */
+
+	/**
+	 * @param operando1		Segundo numero a dividir
+	 * @param operando2     Primer numero a dividir
+	 * @return Valor de la división
+	 * Método de división
+	*/
 	public int dividir(int operando2,int operando1);
 		//pre: hay dos operandos
-		/**
-		 * @param operando2		Primer numero a dividir
-		 * @param operando1     Segundo numero a dividir
-		 * @return entero 		La division de dos enteros
-	*/
 	
 }

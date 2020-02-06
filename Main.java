@@ -36,7 +36,9 @@ public class Main{
                     String line;
                     while ((line = reader.readLine()) != null) {
                         System.out.println(line);
+                        //Crear objeto con las operaciones postfix
                         PostfixCalculator calculadora = new PostfixCalculator(line);
+                        //Imprimir resultado
                         System.out.println(String.valueOf(calculadora.calcular()));
                     }
                 
