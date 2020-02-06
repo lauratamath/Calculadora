@@ -35,6 +35,7 @@ public class Vector<E> implements Stack<E>{
 
     /**
      * El último elemento en ser ingresado es removido de la colección
+     * @return Valor del elemento del nodo a eliminar
      */
     public E pop(){
         Nodo<E> oldTail = this.getTail();
