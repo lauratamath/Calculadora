@@ -37,10 +37,13 @@ public class Vector<E> implements Stack<E>{
      * El último elemento en ser ingresado es removido de la colección
      */
     public E pop(){
-        Nodo<E> newTail = this.getTail().prev();
-        this.setTail(newTail);
-        this.setN(this.getN()-1);
-        return newTail.value();
+        if(this.getTail() != null){
+            Nodo<E> oldTail = this.getTail();
+            Nodo<E> newTail = oldTail.prev();
+            this.setTail(newTail);
+            this.setN(this.getN()-1);
+            return oldTail.value();
+        }
     }
 
     /**
