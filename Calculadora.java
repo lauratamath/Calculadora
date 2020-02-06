@@ -7,8 +7,8 @@
  */
 
 public class Calculadora implements iCalculadora{
-	//int operando1; //Es el primer número al que se operará
-	//int operando2; //Segundo número a operar
+	int operando1; //Es el primer número al que se operará
+	int operando2; //Segundo número a operar
 
 	/**
 	 * @param operando1		Segundo numero a sumar
