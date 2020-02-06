@@ -14,28 +14,42 @@
 //Importación de clases
 import java.util.Scanner; //Leer la entrada de texto
 import java.io.File; //Representa un archivo 
-import java.io.FileNotFoundException; //Intento fallido al abrir un archivo
+import java.io.*; //Intento fallido al abrir un archivo
+import java.awt.*;
 
 
 public class Main{
     public static void main(String[] args){
-    	iCalculadora calcu = new Calculdora();
-    	Stack<Integer> vector = new Vector<Integer>;
-    	Scanner sc = new Scanner(System.in); 
-
-    	String [] operaciones; //Operaciones establecidas en el txt
-        String datos = "" //Lo que se encuentre en el txt se establecera en esta.
-        int operando1, operando2, num;
-        int result=0;
-
-        //Apertura del archivo con defensa
-        try{
-        	Scanner ver = new Scanner(new File("datos.txt"));//Leer el archivo
-        	datos += ver.nextLine();
-        	ver.close();
-        } catch(FileNotFoundException e){//Si el archivo txt no se encuentra
-        	e.printStackTrace();
-        }operaciones= datos.split(" ");
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("//---------- CALCULADORA POSTFIX  ----------//");
+        System.out.println("* Walter Saldaña \n* Laura Tamath\n");
+        while(true){
+            System.out.println("Acontinuacion introduzca la direccion del archivo .txt con la operacion Postfix. \nIngrese 'salir' si desea detener el programa.");
+            String archivo = sc.nextLine();
+            if(archivo.equals("salir")){
+                break;
+            }else{
+                BufferedReader reader = null;
+                try {
+                    File file = new File(archivo);
+                    reader = new BufferedReader(new FileReader(file));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        System.out.println(line);
+                        PostfixCalculator calculadora = new PostfixCalculator(line);
+                        System.out.println(String.valueOf(calculadora.calcular()));
+                    }
+                
+                } catch (IOException e) {
+                    System.out.println("Ingrese la direccion a un archivo valido");
+                } finally {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }            
+        }
     }
 }
