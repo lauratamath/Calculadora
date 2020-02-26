@@ -1,8 +1,7 @@
 /**
- *@author: Laura Tamath
-*@author: Walter Saldana
-*@since 24/02/2020
-*@version 25/02/2020
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
  * Intefaz que posee las operaciones que esta calculadora puede ejecutar
  * Se vincula al último nodo de la colección. 
  */
