@@ -94,6 +94,14 @@ public class Vector<E> implements Stack<E>{
         return this.tail;
     }
 
+////
+    public String getPostfix(){
+        return this.postfix;
+    }
+
+    public Vector<Integer> getVector(){
+        return this.vector;
+    }
     //Método toString
     public String toString(){
         String values = "";

@@ -1,6 +1,8 @@
 /**
  * @author Walter Saldaña
  * @author Laura Tamath
+*@since 24/02/2020
+*@version 25/02/2020
  * 
  * Variación de un nodo simple, difiriendo en la dirección del vector:
  * Cada nodo apunta al nodo que lo antecede (inverso a un nodo común). 
